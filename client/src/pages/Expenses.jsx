@@ -1,0 +1,3 @@
+import CrudPage from '../components/CrudPage.jsx';
+const fields=[{key:'vehicleId',label:'Vehicle',type:'select'},{key:'category',label:'Category',type:'select',options:['Fuel','Maintenance','Repair','Insurance','Other']},{key:'amount',label:'Amount (₹)',type:'number'},{key:'date',label:'Date',type:'date'},{key:'description',label:'Description',required:false},{key:'createdBy',label:'Created by',required:false}];
+export default function Expenses(){return <CrudPage title="Expenses" endpoint="expenses" fields={fields} filters={[{key:'category',label:'category',options:['Fuel','Maintenance','Repair','Insurance','Other']}]} />;}

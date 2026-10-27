@@ -1,0 +1,3 @@
+import CrudPage from '../components/CrudPage.jsx';
+const fields=[{key:'name',label:'Name'},{key:'phone',label:'Phone'},{key:'email',label:'Email',required:false},{key:'licenseNumber',label:'License number'},{key:'licenseExpiry',label:'License expiry',type:'date'},{key:'assignedVehicle',label:'Assigned vehicle',type:'select',required:false},{key:'joiningDate',label:'Joining date',type:'date'},{key:'status',label:'Status',type:'select',options:['Active','Inactive','On Leave']}];
+export default function Drivers(){return <CrudPage title="Drivers" endpoint="drivers" fields={fields} filters={[{key:'status',label:'status',options:['Active','Inactive','On Leave']}]} vehicleOptions={false}/>;}

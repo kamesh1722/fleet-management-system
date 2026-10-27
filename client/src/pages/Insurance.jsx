@@ -1,0 +1,3 @@
+import CrudPage from '../components/CrudPage.jsx';
+const fields=[{key:'vehicleId',label:'Vehicle',type:'select'},{key:'provider',label:'Provider'},{key:'policyNumber',label:'Policy number'},{key:'policyType',label:'Policy type'},{key:'startDate',label:'Start date',type:'date'},{key:'expiryDate',label:'Expiry date',type:'date'},{key:'premium',label:'Premium (₹)',type:'number'},{key:'document',label:'Document URL',required:false}];
+export default function Insurance(){return <CrudPage title="Insurance" endpoint="insurance" fields={fields} filters={[{key:'status',label:'policy status',options:['Active','Expiring Soon','Expired']}]} />;}
